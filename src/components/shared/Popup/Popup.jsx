@@ -4,7 +4,8 @@ import {
     CardHeader,
     CardHeading,
     StyledButton,
-    FlexContainer
+    FlexContainer,
+    Modal
 } from 'components/shared/ContactCard.styles.js';
 function Popup({ open, setOpen, name, handleDelete}) {
     const handleCancel = () => {

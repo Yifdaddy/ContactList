@@ -11,7 +11,7 @@ export const CardWrapper = styled.div`
     border-radius: 5px;
     ${({ $isPopup }) => $isPopup &&
       `
-        position: absolute; 
+        position: fixed; 
         top: 35%;
         left: 35%;
       `
@@ -22,7 +22,7 @@ export const CardHeader = styled.header`
     padding-bottom: 32px;
 `;
 
-export const CardHeading = styled.h1`
+export const CardHeading = styled.h3`
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -40,8 +40,8 @@ export const StyledButton = styled.button`
     width: auto;
     padding: 0px 8px;
     margin-left: 8px;
-    background: ${({ $isDelete }) => $isDelete ? '#F7B600' : '#1A1F71'};
-    border-color: ${({ $isDelete }) => $isDelete ? '#F7B600' : '#1A1F71'};
+    background: ${({ $isDelete, $isGoBack }) => $isDelete || $isGoBack ? '#F7B600' : '#1A1F71'};
+    border-color: ${({ $isDelete, $isGoBack }) => $isDelete || $isGoBack ? '#F7B600' : '#1A1F71'};
     border-radius: 28px;
     color: #fff;
     cursor: pointer;

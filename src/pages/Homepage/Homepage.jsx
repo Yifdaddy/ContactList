@@ -11,9 +11,11 @@ function Homepage({ contacts, setContacts }) {
     return (
         <div>
             <HeaderWrapper>
-                <header>Homepage of Contact List</header>
-                <br />
-                <StyledButton onClick={handleAddNewContact}>Add a new contact</StyledButton>
+                <header>
+                    <h1>Homepage of Contact List</h1>
+                    <br />
+                    <StyledButton onClick={handleAddNewContact}>Add a new contact</StyledButton>
+                </header>
             </HeaderWrapper>
             {contacts.map((contact, idx) => {
                 return (

@@ -27,6 +27,9 @@ function AddNewContact({ setContacts }) {
         setContacts(prev => [...prev, currentPerson]);
         history.push('/');
     }
+    const handleGoBack = () => {
+        history.goBack();
+    }
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -34,22 +37,31 @@ function AddNewContact({ setContacts }) {
                     <CardHeader>
                         <CardHeading>
                             <label htmlFor='firstName'>First Name: {" "}</label> 
-                            <input value={currentPerson.firstName} name="firstName" onChange={handleOnChange}/>
+                            <input value={currentPerson.firstName} name="firstName" onChange={handleOnChange} required/>
                         </CardHeading>
                         <CardHeading>
                             <label htmlFor='lastName'>Last Name: {" "}</label> 
-                            <input value={currentPerson.lastName} name="lastName" onChange={handleOnChange}/>
+                            <input value={currentPerson.lastName} name="lastName" onChange={handleOnChange} required/>
                         </CardHeading>
                         <CardHeading>
                             <label htmlFor='phoneNumber'>Phone: {" "}</label> 
-                            <input value={currentPerson.phoneNumber} name="phoneNumber" onChange={handleOnChange}/>
+                            <input value={currentPerson.phoneNumber} name="phoneNumber" onChange={handleOnChange} required/>
                         </CardHeading>
                         <CardHeading>
                             <label htmlFor='emailAddress'>Email: {" "}</label> 
-                            <input value={currentPerson.emailAddress} name="emailAddress" onChange={handleOnChange}/>
+                            <input value={currentPerson.emailAddress} name="emailAddress" onChange={handleOnChange} required/>
                         </CardHeading>
                         <FlexContainer>
-                            <StyledButton type="submit">Submit</StyledButton>
+                            <StyledButton $isGoBack onClick={handleGoBack}>Back</StyledButton>
+                            <StyledButton 
+                                type="submit" 
+                                disabled={
+                                    currentPerson.firstName.length === 0 ||
+                                    currentPerson.lastName.length === 0 ||
+                                    currentPerson.emailAddress.length === 0 ||
+                                    currentPerson.phoneNumber.length === 0
+                                }
+                            >Submit</StyledButton>
                         </FlexContainer>
                     </CardHeader>
                 </CardWrapper>
