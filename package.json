@@ -2,6 +2,7 @@
   "name": "contactlist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yifdaddy.github.io/ContactList/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,7 +15,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build --git git",
     "start": "react-scripts start",
     "build": "react-scripts build",
