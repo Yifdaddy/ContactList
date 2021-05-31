@@ -34,7 +34,7 @@ function Person({ contactInfo, setContacts }) {
         <>
             <CardWrapper>
                 <CardHeader>
-                    <CardHeading onClick={handleToggleShowInfo}>Name: {personalInfo.firstName + " " + personalInfo.lastName}</CardHeading>
+                    <CardHeading onClick={handleToggleShowInfo} style={{cursor: "pointer"}}>Name: {personalInfo.firstName + " " + personalInfo.lastName}</CardHeading>
                     {isActive && 
                         <>
                             <CardHeading>Phone: {personalInfo.phoneNumber}</CardHeading>
