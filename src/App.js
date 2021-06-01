@@ -7,8 +7,8 @@ import AddNewContact from 'components/Contact/AddNewContact';
 import CenteredWrapper from 'components/shared/CenteredWrapper.styles.js';
 const contactList = [
   {   
-      firstName: "noah", 
-      lastName: "pan",
+      firstName: "Ark", 
+      lastName: "Pan",
       phoneNumber: "6824096384",    
       emailAddress: "arkpan@gmail.com",  
   }, 
