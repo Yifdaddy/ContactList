@@ -21,7 +21,8 @@ function Homepage({ contacts, setContacts }) {
                 return (
                     <Person key={contact.phoneNumber} contactInfo={contact} setContacts={setContacts}/>
                 );
-            })}    
+            })}
+            <div style={{marginBottom: '48px'}}/>    
         </div>
     );
 };
